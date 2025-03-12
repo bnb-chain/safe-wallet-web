@@ -22,7 +22,7 @@ export const isLedger = (wallet: ConnectedWallet): boolean => {
 }
 
 export const isHardwareWallet = (wallet: ConnectedWallet): boolean => {
-  return [WALLET_KEYS.LEDGER, WALLET_KEYS.TREZOR, WALLET_KEYS.KEYSTONE].includes(
+  return [WALLET_KEYS.LEDGER, WALLET_KEYS.KEYSTONE].includes(
     wallet.label.toUpperCase() as WALLET_KEYS,
   )
 }
