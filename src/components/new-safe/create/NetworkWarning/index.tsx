@@ -7,7 +7,7 @@ const NetworkWarning = () => {
   const chain = useCurrentChain()
   const isUnsupportedChain = useIsUnsupportedChain()
 
-  if (!chain && !isUnsupportedChain) return null
+  if (!chain) return null
 
   const message = isUnsupportedChain ? (
     <>
