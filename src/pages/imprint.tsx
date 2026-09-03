@@ -1,7 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import SafeImprint from '@/components/imprint'
-import { IS_OFFICIAL_HOST } from '@/config/constants'
 
 const Imprint: NextPage = () => {
   return (
@@ -10,7 +8,12 @@ const Imprint: NextPage = () => {
         <title>{'BNB Safe{Wallet} – Imprint'}</title>
       </Head>
 
-      <main>{IS_OFFICIAL_HOST && <SafeImprint />}</main>
+      <main>
+        {/*
+         * The legacy Imprint content is intentionally not published for BNB Safe.
+         * Keep this route separate so the other legal pages remain unaffected.
+         */}
+      </main>
     </>
   )
 }
